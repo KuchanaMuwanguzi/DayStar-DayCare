@@ -1,0 +1,16 @@
+.custom-bg-color {
+    background-color: brown;
+}
+
+body, html {
+    height: 100%;
+  }
+  
+  .bg {
+    background-image: url("images/Daystar\ Daycareimages.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+   

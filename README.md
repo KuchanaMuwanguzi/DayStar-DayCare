@@ -2,7 +2,7 @@
 # STATIC
 - Landing Page - Navigation Bar with About Us, Home, Logo
 
-- Assets - Pictures, Logo
+- Images - Pictures, Logo
 
 - Footer  - Contacts, location, important links
 

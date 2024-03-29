@@ -1,9 +1,16 @@
-body {
-    background-color: #E8751A;   
-}
-
 .custom-bg-color {
     background-color: #FDA403;
 }
 
+body, html {
+    height: 100%;
+  }
+  
+  .bg {
+    background-image: url("images.png/Daystar/Daycareimages.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
    

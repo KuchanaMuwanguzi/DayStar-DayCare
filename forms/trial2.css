@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url(/images/wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .login-form {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: brown;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .logo-container {
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .forgot-password a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .back-button {
+    margin-top: 10px;
+  }
+  
+  .back-button button {
+    padding: 10px 20px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .back-button button:hover {
+    background-color: white;
+  }

@@ -1,6 +1,8 @@
 body {
     font-family: fantasy;
-    background-color: #FDA403 ;
+    background-image: url(/images/tested4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .container {
     max-width: 400px;
@@ -20,7 +22,7 @@ body {
 input[type="text"], input[type="date"], select {
     width: 100%;
     padding: 5px;
-    margin: 5px 0;
+    margin: 1px 0;
     box-sizing: border-box;
 }
 input[type="radio"], input[type="checkbox"] {

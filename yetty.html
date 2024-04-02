@@ -78,6 +78,31 @@
             <input type="text" id="idNumber" name="idNumber" placeholder="Enter your ID number">
             <div id="idNumberAlert" class="alert"></div>
         </div>
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter your Location">
+            <div id="locationAlert" class="alert"></div>
+        </div>
+        <div class="form-group">
+            <label for="kin">Next of kin:</label>
+            <input type="text" id="kin" name="kin" placeholder="Enter your Next of kin">
+            <div id="kinAlert" class="alert"></div>
+        </div>
+        <div class="form-group">
+            <label for="Recommender">Recommender's name:</label>
+            <input type="text" id="recommender" name="recommender" placeholder="Enter your Recommender's name">
+            <div id="recomenderAlert" class="alert"></div>
+        </div>
+        <div class="form-group">
+            <label for="education">Level of Education:</label>
+            <input type="text" id="education" name="education" placeholder="Enter your Level of Education">
+            <div id="educationAlert" class="alert"></div>
+        </div>
+        <div class="form-group">
+            <label for="sitter">Sitter Number:</label>
+            <input type="text" id="sitter" name="sitter" placeholder="Enter your Sitter Number">
+            <div id="sitterAlert" class="alert"></div>
+        </div>
         <button type="submit" class="btn">Submit</button>
     </form>
 </div>
@@ -125,8 +150,45 @@
                 idNumberAlert.textContent = "";
             }
 
+            //Validation logic for next of kin
+            let kinInput = document.getElementById("kin");
+            let kinAlert = document.getElementById("kinAlert");
+            if (kinInput.value.length < 3) {
+                kinAlert.textContent = "Name must be at least 3 characters long.";
+            } else {
+                kinAlert.textContent = "";
+            }
+
+            // Validation logic for Recomender's name field
+            let recomenderInput = document.getElementById("recomender");
+            let recomenderAlert = document.getElementById("recomenderAlert");
+            if (recomenderInput.value.length < 3) {
+                recomenderAlert.textContent = "Name must be at least 3 characters long.";
+            } else {
+                recomenderAlert.textContent = "";
+            }
+
+            // Validation logic for education field
+            let educationInput = document.getElementById("education");
+            let educationAlert = document.getElementById("educationAlert");
+            if (educationInput.value) {
+                educationAlert.textContent = "education level is required";
+            } else {
+                educationAlert.textContent = "";
+        }
+
+            // Validation logic for sitter No. field
+            let sitterInput = document.getElementById("sitter");
+            let sitterAlert = document.getElementById("sitterAlert");
+            if (sitterInput.value.length !== 3) {
+                sitterAlert.textContent = "NIN must be 13 characters long.";
+            } else {
+                sitterAlert.textContent = "";
+            }
+
             // Check if all fields are valid
-            if (nameInput.value.length >= 3 && contactInput.value.length >= 10 && contactInput.value.length <= 12 && dobInput.value && idNumberInput.value.length === 13) {
+            //if (nameInput.value.length >= 3 && contactInput.value.length >= 10 && contactInput.value.length <= 12 && dobInput.value && idNumberInput.value.length === 13) {
+                if (nameInput.value.length >= 3 && contactInput.value.length >= 10 && contactInput.value.length <= 12 && dobInput.value && idInput.value.length === 13 && locationInput.value && kinInput.value.length < 3 && recomenderInput.value.length < 3 && educationInput.value && sitterInput.value.length === 3) {
                 alert("Form submitted successfully!");
                 registrationForm.reset(); // Reset form
             }

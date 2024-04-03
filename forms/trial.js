@@ -1,13 +1,17 @@
-let form = document.getElementById('login');
+const form = document.getElementById("another-login");
 
-form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        fetch('../dummyData.json')
-            .then(response => response.json())
-            .then(json => {
-                console.log(json);
-                if(json[0].admin[0].email === login.email.value 
-                    && json[0].admin[0].password === login.password.value){
-                        window.location.replace('./admin.html')
-                }else{
-                  
+function login (){
+    console.log(form.username.value)
+}
+
+form.addEventListener ("submit", (event) => {
+    event.preventDefault();
+    const logInData ={
+        username: form.username.value,
+        password: form.password.value
+    }
+    console.log (logInData)
+}
+
+
+)

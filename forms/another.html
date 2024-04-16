@@ -62,7 +62,7 @@
     <img src="your_logo.png" alt="Logo">
   </div>
   <h2>Login Form</h2>
-  <form id="loginForm">
+  <form id="Sitterlogin">
     <input type="text" id="username" placeholder="Username" maxlength="20" required>
     <input type="password" id="password" placeholder="Password" maxlength="20" required>
     <input type="submit" value="Login">
@@ -73,17 +73,17 @@
 
 <script>
 function forgotPassword() {
-  alert("Please contact support to reset your password.");
+  alert("Please contact Admin to reset your password.");
 }
 
 function goBack() {
   window.history.back();
 }
 
-document.getElementById("loginForm").addEventListener("submit", function(event) {
+document.getElementById("Sitterlogin").addEventListener("submit", function(event) {
   event.preventDefault();
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
   
   if (username.length > 10) {
     alert("Username cannot exceed 10 characters.");

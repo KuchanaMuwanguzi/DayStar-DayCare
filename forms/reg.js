@@ -58,14 +58,14 @@ const registrationForm = document.getElementById("registrationForm");
             kinAlert.textContent = "";
         }
 
-        // Validation logic for Recomender's name field
+        /*/ Validation logic for Recomender's name field
         let recomenderInput = document.getElementById("recomender");
         let recomenderAlert = document.getElementById("recomenderAlert");
-        if (recomenderInput.value.length < 3) {
-            recomenderAlert.textContent = "Name must be at least 3 characters long.";
+        if (recomenderInput.value) {
+            recomenderAlert.textContent = "Recomender's name is required.";
         } else {
             recomenderAlert.textContent = "";
-        }
+        }*/
 
         // Validation logic for education field
         let educationInput = document.getElementById("education");
@@ -86,7 +86,7 @@ const registrationForm = document.getElementById("registrationForm");
         }
 
         // Check if all fields are valid
-        if (nameInput.value.length >= 3 && contactInput.value.length >= 10 && contactInput.value.length <= 12 && dobInput.value && idInput.value.length === 13 && locationInput.value && kinInput.value.length < 3 && recomenderInput.value.length < 3 && educationInput.value && sitterInput.value.length === 3) {
+        if (nameInput.value.length >= 3 && contactInput.value.length >= 10 && contactInput.value.length <= 12 && dobInput.value && idInput.value.length === 13 && locationInput.value && kinInput.value.length < 3 && recomenderInput.value && educationInput.value && sitterInput.value.length === 3) {
             alert("Form submitted successfully!");
             registrationForm.reset(); // Reset form
         }

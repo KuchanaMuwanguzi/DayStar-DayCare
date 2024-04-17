@@ -1,8 +1,9 @@
 body {
     font-family: fantasy;
-    background-image: url(/images/tested4.jpg);
+    background-color: aliceblue;
     background-size: cover;
     background-repeat: no-repeat;
+    color: black;
 }
 .container {
     max-width: 400px;
@@ -11,7 +12,7 @@ body {
     border: 2px solid #333;
     padding: 20px;
     border-radius: 10px;
-    background-image: url(/images/background\ baby.jpg);
+    background-color: skyblue;
     background-size: cover;
 }
 .logo {
@@ -33,7 +34,7 @@ input[type="radio"], input[type="checkbox"] {
     text-align: left;
 }
 .register-btn {
-    background-color: #4CAF50;
+    background-color: blue;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -42,5 +43,9 @@ input[type="radio"], input[type="checkbox"] {
     font-size: 16px;
 }
 .register-btn:hover {
-    background-color: #45a049;
+    background-color: lightblue;
+}
+
+.alert {
+    color: red;
 }

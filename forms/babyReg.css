@@ -81,7 +81,7 @@
   #result{
     color: red;
     font-weight: 600;
-    position: relative;
+    position: top;
     top: 25px;
   }
   
@@ -114,3 +114,4 @@
       width: 0;
     }
   }
+  

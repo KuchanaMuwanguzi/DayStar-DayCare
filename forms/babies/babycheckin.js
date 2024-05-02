@@ -1,20 +1,29 @@
-document.getElementById('checkoutForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
-    
-    // Retrieve form data
-    let name = document.getElementById('name').value;
-    let pickedBy = document.getElementById('pickedBy').value;
-    let phone = document.getElementById('phone').value;
-    let checkoutDateTime = document.getElementById('checkout').value;
-    let notes = document.getElementById('notes').value;
+function checkIn() {
+ // Retrieve checkIn data
+ let babyName = document.getElementById('babyName').value;
+ let broughtBy = document.getElementById('broughtBy').value;
+ let phone = document.getElementById('phone').value;
+ let periodOfStay = document.getElementById('periodOfStay').value
+ let amountPaid = document.getElementById('amountPaid').value
+ let checkInDateTime = document.getElementById('checkIn').value;
+ let notes = document.getElementById('notes').value;
 
-    // You can perform validation here if needed
+//create JS object with checkIn data
+let checkInData = {
+  babyName: babyName,
+  broughtBy: broughtBy,
+  phone: phone,
+  periodOfStay: periodOfStay,
+  amountPaid: amountPaid,
+  checkInDateTime: checkInDateTime,
+  notes: notes
+};
 
-    // Here you can send the form data to a server using AJAX or perform any other actions
-    console.log("Form submitted!");
-    console.log("Name:", name);
-    console.log("Picked By:", pickedBy);
-    console.log("Phone:", phone);
-    console.log("Checkout Date and Time:", checkoutDateTime);
-    console.log("Notes:", notes);
-  });
+//converting object toJSON string
+let checkInDataJSON = JSON.stringify(checkInData);
+
+//storing JSON string in local storage
+localStorage.setItem('checkInData', checkInDataJSON);
+
+alert('Baby checkIn successful!');
+}

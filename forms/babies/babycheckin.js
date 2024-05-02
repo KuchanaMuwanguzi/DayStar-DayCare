@@ -1,29 +1,26 @@
-function checkIn() {
- // Retrieve checkIn data
- let babyName = document.getElementById('babyName').value;
- let broughtBy = document.getElementById('broughtBy').value;
- let phone = document.getElementById('phone').value;
- let periodOfStay = document.getElementById('periodOfStay').value
- let amountPaid = document.getElementById('amountPaid').value
- let checkInDateTime = document.getElementById('checkIn').value;
- let notes = document.getElementById('notes').value;
+function checkIn(event) {
+  // Prevent default form submission
+  event.preventDefault();
 
-//create JS object with checkIn data
-let checkInData = {
-  babyName: babyName,
-  broughtBy: broughtBy,
-  phone: phone,
-  periodOfStay: periodOfStay,
-  amountPaid: amountPaid,
-  checkInDateTime: checkInDateTime,
-  notes: notes
-};
+  // Get form values
+  var babyName = document.getElementById('babyName').value;
+  var broughtBy = document.getElementById('broughtBy').value;
+  var phone = document.getElementById('phone').value;
+  var periodOfStay = document.getElementById('periodOfStay').value;
+  var amountPaid = document.getElementById('amountPaid').value;
+  var checkin = document.getElementById('checkin').value;
+  var notes = document.getElementById('notes').value;
 
-//converting object toJSON string
-let checkInDataJSON = JSON.stringify(checkInData);
+  // Validation: Ensure all fields are filled
+  if (babyName.trim() === '' || broughtBy.trim() === '' || phone.trim() === '' || periodOfStay.trim() === '' || amountPaid.trim() === '' || checkin.trim() === '') {
+      alert('Please fill in all required fields.');
+      return;
+  }
 
-//storing JSON string in local storage
-localStorage.setItem('checkInData', checkInDataJSON);
-
-alert('Baby checkIn successful!');
+  // If all fields are filled, display success message
+  alert('Baby check-in successful!');
+  document.getElementById('checkinForm').reset();
 }
+
+// Attach the checkIn function to the form's submit event
+document.getElementById('checkinForm').addEventListener('submit', checkIn);

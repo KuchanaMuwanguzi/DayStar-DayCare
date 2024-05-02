@@ -11,7 +11,7 @@ function register() {
     let sitterNumber = document.getElementById("sitterNumber").value;
 
     // Create a JavaScript object with form data
-    let formData = {
+    let sitterData = {
       fullName: fullName,
       location: location,
       nin: nin,
@@ -24,10 +24,10 @@ function register() {
     };
 
     // Convert the object to a JSON string
-    let formDataJSON = JSON.stringify(formData);
+    let sitterDataJSON = JSON.stringify(sitterData);
 
     // Store the JSON string in local storage
-    localStorage.setItem("formData", formDataJSON);
+    localStorage.setItem("sitterData", sitterDataJSON);
     
     alert("Sitter registered successfully!");
   }

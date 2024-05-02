@@ -1,20 +1,26 @@
+// JavaScript code for form validation and submission
 document.getElementById('checkoutForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
-    
-    // Retrieve form data
-    let name = document.getElementById('name').value;
-    let pickedBy = document.getElementById('pickedBy').value;
-    let phone = document.getElementById('phone').value;
-    let checkoutDateTime = document.getElementById('checkout').value;
-    let notes = document.getElementById('notes').value;
+  // Prevent default form submission
+  event.preventDefault();
 
-    // You can perform validation here if needed
+  // Get form values
+  var name = document.getElementById('name').value;
+  var pickedBy = document.getElementById('pickedBy').value;
+  var phone = document.getElementById('phone').value;
+  var checkout = document.getElementById('checkout').value;
+  var notes = document.getElementById('notes').value;
 
-    // Here you can send the form data to a server using AJAX or perform any other actions
-    console.log("Form submitted!");
-    console.log("Name:", name);
-    console.log("Picked By:", pickedBy);
-    console.log("Phone:", phone);
-    console.log("Checkout Date and Time:", checkoutDateTime);
-    console.log("Notes:", notes);
-  });
+  // Perform validation
+  if (name.trim() === '' || pickedBy.trim() === '' || phone.trim() === '' || checkout.trim() === '') {
+      alert('Please fill in all required fields.');
+  } else {
+      // Display success message
+      alert('Check-out successful!');
+      // You can also reset the form after successful submission
+      document.getElementById('checkoutForm').reset();
+  }
+});
+
+function goBack() {
+  window.history.back();
+}

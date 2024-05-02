@@ -6,7 +6,7 @@ document.getElementById('adminForm').addEventListener('submit', function(event) 
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     
-    // Validate form fields
+    // Validation
     if (!username || !email || !password) {
       alert('All fields are required');
       return;

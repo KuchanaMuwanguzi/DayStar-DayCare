@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: orange;
+  }
+  
+  .doll-stall, .shopping-cart {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  #doll-list, #cart-items {
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #total-amount {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  #pay-up-btn {
+    display: none;
+  }
+  
+  .doll-img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .doll-item {
+    cursor: pointer;
+  }
+  
+  .selected {
+    border: 2px solid blue;
+  }
+  
